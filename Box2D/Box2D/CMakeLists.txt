@@ -123,7 +123,7 @@ set(BOX2D_General_HDRS
 )
 include_directories( ../ )
 
-if(BOX2D_BUILD_SHARED)
+#if(BOX2D_BUILD_SHARED) important
 	add_library(Box2D_shared SHARED
 		${BOX2D_General_HDRS}
 		${BOX2D_Joints_SRCS}
@@ -146,7 +146,7 @@ if(BOX2D_BUILD_SHARED)
 		CLEAN_DIRECT_OUTPUT 1
 		VERSION ${BOX2D_VERSION}
 	)
-endif()
+#endif()
 
 if(BOX2D_BUILD_STATIC)
 	add_library(Box2D STATIC
